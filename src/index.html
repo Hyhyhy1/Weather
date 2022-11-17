@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8">
+    <title>The best weather app</title>
+</head>
+  <body>
+    <section class="weather_data">
+      <div class="weather_container">
+        <form class="weather_form" name="publish">
+          <div class="weather_user-input_wrapper">
+            <lavel for="latitude" class="weather_user-input_text">Широта</p> 
+            <input class="weather_user-input" type="number" id="latitude" name="latitude" step="0.001" min="-90" max="90" pattern="[0-9]{2},[0-9]{3}">
+          </div>
+          <div class="weather_user-input_wrapper">
+            <label for="longitude" class="weather_user-input_text">Долгота</p> 
+            <input class="weather_user-input" type="number" id="longitude" name="longitude" step="0.001" min="-180" max="180" pattern="[0-9]{3},[0-9]{3}">
+          </div>
+          <input class="weather_button" type="submit" value="Показать погоду"/>
+          
+        </form>
+      </div>
+    </section>
+    <section class="weather_output">
+      <div class="weather_output_container">
+        <div class="weather_output_widget">
+          <div class="weather_output_widget_header">
+            <p class="weather_temperature" id="temperature"></p>
+            <p class="weather_weathercode" id="weathercode"></p>
+            <img class="weather_icon" id="icon">
+          </div>
+          <div class="weather_output_widget_body">
+            <img class="weather_map" id="map">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

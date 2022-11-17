@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.weather_container{
+    max-width: 1152px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.weather_output_container{
+    max-width: 1152px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.weather_form{
+    text-align: center;
+}
+
+.weather_user-input_wrapper{
+    margin: 25px 25%;
+}
+
+.weather_user-input{
+    background-color: moccasin;
+}
+
+.weather_output_container{
+    display: grid;
+}
+
+.weather_output_widget_header{
+    display: flex;
+}
