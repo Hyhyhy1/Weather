@@ -25,7 +25,7 @@ function printResponce(responce){
 
     document.getElementById("temperature").innerHTML = responce.hourly.temperature_2m[index] + ' ' + responce.hourly_units.temperature_2m;
     document.getElementById("weathercode").innerHTML = getWeather(responce.hourly.weathercode[index])
-    //document.getElementById("image").src = 
+    //document.getElementById("image").src = 104f876b-9e10-4987-a817-677a0db09e2b   
 }
 
 function getCurrentDate(){
@@ -35,23 +35,29 @@ function getCurrentDate(){
     return date;
 }
 
-function getWeather(weathercode){ //переписать на if
-    if (weathercode = 0){
+function getWeather(weathercode){ 
+    if (weathercode == 0){
         return 'Ясно';
-        
+
     } else if(weathercode > 0 && weathercode <=3){
         return 'Частично облачно';
 
     } else if(weathercode > 44 && weathercode <=48){
         return 'Туман';
 
-    } else if(weathercode > 60 && weathercode <=65){
+    }else if(weathercode > 50 && weathercode <=57){
+        return 'Морось';
+
+    } else if(weathercode > 60 && weathercode <=67){
         return 'Дождь';
 
-    } else if(weathercode > 70 && weathercode <=75){
+    } else if(weathercode > 70 && weathercode <=77){
         return 'Снегопад';
 
-    } else if(weathercode >94 && weathercode <=99){
+    }else if (weathercode > 79 && weathercode <=82){
+        return 'Небольшой ливневый дождь';
+
+    }else if(weathercode >94 && weathercode <=99){
         return 'Гроза';
 
     } else{

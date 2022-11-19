@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles/main.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
     <title>The best weather app</title>
 </head>
   <body>
@@ -22,18 +23,20 @@
         </form>
       </div>
     </section>
-    <section class="weather_output">
-      <div class="weather_output_container">
-        <div class="weather_output_widget">
-          <div class="weather_output_widget_header">
-            <p class="weather_temperature" id="temperature"></p>
-            <p class="weather_weathercode" id="weathercode"></p>
-            <img class="weather_icon" id="icon">
-          </div>
-          <div class="weather_output_widget_body">
-            <img class="weather_map" id="map">
-          </div>
-        </div>
+    <section class="widgets">
+      <div class="widgets_container">
+        <ul class="widgets_list">
+          <li class="widgets_list_item">
+              <div class="weather_output_widget_header">
+                <p class="weather_temperature" id="temperature"></p>
+                <p class="weather_weathercode" id="weathercode"></p>
+                <img class="weather_icon" id="icon">
+              </div>
+              <div class="weather_output_widget_body">
+                <img class="weather_map" id="map">
+              </div>
+          </li>
+        </ul>
       </div>
     </section>
     <script src="script.js"></script>
