@@ -33,7 +33,7 @@ p {
     margin-bottom: 15px;
 }
 
-.weather_output_container{
+.widgets_container{
     max-width: 1152px;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -51,10 +51,62 @@ p {
     background-color: moccasin;
 }
 
-.weather_output_container{
+.widgets_list{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
 }
 
-.weather_output_widget_header{
+.widgets_header{
+    background: #76E2E2;
+    border-radius: 27px 27px 0px 0px;
+    padding-bottom: 10px;
+}
+
+.widgets_header_temperature{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widgets_temperature{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 48px;
+    padding-left: 10px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.widgets_icon{
+    text-align: right;
+    height: 52px;
+    width: auto;
+}
+
+.widgets_weathercode{
+    margin-bottom: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 10px;
+    color: #FFFFFF;
+}
+
+.widgets_map{
+    height: 400px;
+}
+
+.widgets_windSpeed{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 10px;
+    color: #FFFFFF;
 }
