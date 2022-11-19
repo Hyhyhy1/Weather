@@ -1,3 +1,4 @@
+//да, это "глобальные" переменные, да, у меня не получилось обойтись без них.
 let widgetsCounter = 0;
 let latitude = 0
 let longitude = 0;
@@ -17,11 +18,11 @@ function sendRequest(url){
         return responce.json()
     })
 }
-//функция получилось большой, но есть ли смысл её дробить на более мелкие? Она создает html разметку виджетов-элементов списка
-//можно было отделить создание внутренних элементов от оберток, но есть ли в этом смысл?
+//функция получилось большой, но есть ли смысл её дробить на более мелкие? Она создает html разметку виджетов-элементов списка.
+//можно было отделить создание внутренних элементов от оберток / отделить построение иерархии элементов, 
+//но это выглядит как просто попытка войти в ограничение на 25 строк на функцию.
 function formWidget(responce){
     let widgetsContainer = document.getElementById("widgets_container");
-    console.log(responce);
 
     let listElement = document.createElement('li');
     listElement.className += "widgets_list_item";
@@ -50,6 +51,7 @@ function formWidget(responce){
     let map = document.createElement('div');
     map.className += "widgets_map";
     map.id = String(widgetsCounter);
+
     ymaps.ready(initMap);
 
     headerTemperature.appendChild(temperature);
