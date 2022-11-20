@@ -51,7 +51,7 @@ function formWidget(responce){
     let map = document.createElement('div');
     map.className += "widgets_map";
     map.id = String(widgetsCounter);
-
+    
     ymaps.ready(initMap);
 
     headerTemperature.appendChild(temperature);
@@ -72,6 +72,10 @@ function initMap(){
         center: [latitude, longitude],
         zoom: 7
     })
+    let placemark = new ymaps.Placemark([latitude,longitude], {}, {
+
+    });
+    map.geoObjects.add(placemark);
 }
 
 function getCurrentDateIndex(responce){
